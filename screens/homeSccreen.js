@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, StatusBar } from 'react-native'
 import React from 'react'
+import {useNavigation} from  '@react-navigation/native'
 import Tabs from '../Navigation/tabs'
 import CustomText from '../components/CustomText'
 import Carousel from '../components/Carousel'
 
 const HomeScreen = () => {
+  const navigation = useNavigation()
   return (
     
     <View style={styles.container}>
@@ -93,9 +95,7 @@ const HomeScreen = () => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style = {styles.carousel}>
-            <Carousel/>
-        </View>
+        
         <ScrollView style={styles.quickAccessContainer}>
           <CustomText style={styles.quickAccessTitle}>Quick Access:</CustomText>
           <View style={styles.quickAccessGrid}>
@@ -136,6 +136,9 @@ const HomeScreen = () => {
           }}>- 2,000.00</Text>
         </View>
       </ScrollView>
+      <View style = {styles.carousel}>
+            <Carousel/>
+      </View>
       
       </View>   
   </View>
@@ -216,9 +219,9 @@ const styles = StyleSheet.create({
   },
   quickAccessButton: {
     backgroundColor: '#111337',
-    height:81,
-    width:81,
-    padding: 15,
+    height:65,
+    width:65,
+    padding: 10,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent:'flex-start',

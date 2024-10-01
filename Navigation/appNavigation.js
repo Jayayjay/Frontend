@@ -9,13 +9,15 @@ import RegisterScreen from '../screens/auth/RegisterScreen';
 import VerifyOTPScreen from '../screens/auth/OTPScreen.js';
 import MainTabNavigator from './mainTabNavigator.js';
 import HomeScreen from '../screens/homeSccreen.js';
+import profileScreen from '../screens/profileScreen.js';
 
 const Stack = createStackNavigator();
 
 // Auth Stack (Login/Registration)
 const AuthStack = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name="Login" component={HomeScreen} />
+    <Stack.Screen name="Login" component={LoginScreen} />
+    {/* <Stack.Screen name = "Profile" component={profileScreen}/> */}
     <Stack.Screen name="Register" component={RegisterScreen} />
     <Stack.Screen name="OTP" component = {VerifyOTPScreen}/>
   </Stack.Navigator>
