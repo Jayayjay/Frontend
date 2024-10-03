@@ -105,7 +105,7 @@ const RegisterScreen = ({ navigation }) => {
               <Text style={styles.createAccount}>
                 Don't have an account?{' '}
               </Text>
-              <Text style={styles.create}>Sign In</Text>
+              <Text style={styles.create}>Log in</Text>
             </TouchableOpacity>
           </View>
 

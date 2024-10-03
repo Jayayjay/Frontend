@@ -10,6 +10,8 @@ import VerifyOTPScreen from '../screens/auth/OTPScreen.js';
 import MainTabNavigator from './mainTabNavigator.js';
 import HomeScreen from '../screens/homeSccreen.js';
 import profileScreen from '../screens/profileScreen.js';
+import CryptoConverterScreen from '../screens/converterScreen.js';
+import settingScreen from '../screens/settingScreen.js';
 
 const Stack = createStackNavigator();
 
