@@ -1,4 +1,3 @@
-
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, StatusBar} from 'react-native';
 import React,{useState, useContex} from 'react'
 import { useNavigation } from '@react-navigation/native';

@@ -4,14 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { AuthContext } from '../context/authContext';
 
 // Import screens and navigators
-import LoginScreen from '../screens/auth/LoginScreen';
-import RegisterScreen from '../screens/auth/RegisterScreen';
-import VerifyOTPScreen from '../screens/auth/OTPScreen.js';
+import LoginScreen from '../screens/LoginScreen';
+import RegisterScreen from '../screens/RegisterScreen';
 import MainTabNavigator from './mainTabNavigator.js';
-import HomeScreen from '../screens/homeSccreen.js';
-import profileScreen from '../screens/profileScreen.js';
-import CryptoConverterScreen from '../screens/converterScreen.js';
-import settingScreen from '../screens/settingScreen.js';
 
 const Stack = createStackNavigator();
 
@@ -19,9 +14,7 @@ const Stack = createStackNavigator();
 const AuthStack = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
     <Stack.Screen name="Login" component={LoginScreen} />
-    {/* <Stack.Screen name = "Profile" component={profileScreen}/> */}
     <Stack.Screen name="Register" component={RegisterScreen} />
-    <Stack.Screen name="OTP" component = {VerifyOTPScreen}/>
   </Stack.Navigator>
 );
 

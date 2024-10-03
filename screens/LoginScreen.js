@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import CustomButton from '../../components/CustomButton';
-import CustomText from '../../components/CustomText';
+import CustomButton from '../components/CustomButton';
+import CustomText from '../components/CustomText';
 import {useNavigation} from '@react-navigation/native'
-import { loginUser } from '../../api/auth';
+import { loginUser } from '../api/auth';
 
 const LoginScreen = () => {
   const [username, setUsername] = useState('');
@@ -75,8 +75,8 @@ const LoginScreen = () => {
 
       
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Login</Text>
+      <TouchableOpacity style={styles.button} onPress={''}>
+        <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
 
 
@@ -100,17 +100,17 @@ const LoginScreen = () => {
       <View style={styles.socialIcons}>
         <TouchableOpacity onPress={() => { /* Handle Apple login */ }}>
           <View style={styles.circle}>
-            <Image source={require('../../assets/images/google.png')} style={styles.icon} />
+            <Image source={require('../assets/images/google.png')} style={styles.icon} />
           </View>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => { /* Handle Google login */ }}>
           <View style={styles.circle}>
-            <Image source={require('../../assets/images/apple.png')} style={styles.icon} />
+            <Image source={require('../assets/images/apple.png')} style={styles.icon} />
           </View>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => { /* Handle Facebook login */ }}>
           <View style={styles.circle}>
-            <Image source={require('../../assets/images/facebook.png')} style={styles.icon} />
+            <Image source={require('../assets/images/facebook.png')} style={styles.icon} />
           </View>
         </TouchableOpacity>
       </View>
