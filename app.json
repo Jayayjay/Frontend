@@ -2,6 +2,11 @@
   "expo": {
     "name": "PayClick",
     "slug": "PayClick",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "cefd6027-5e28-4fe3-9708-07c384840d44"
+      }
+    }
   }
 }
