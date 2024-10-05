@@ -6,7 +6,7 @@ import { AuthContext } from '../context/authContext';
 // Import screens and navigators
 import LoginScreen from '../screens/auth/LoginScreen';
 import RegisterScreen from '../screens/auth/RegisterScreen';
-import VerifyOTPScreen from '../screens/auth/OTPScreen.js';
+// import VerifyOTPScreen from '../screens/auth/OTPScreen.js';
 import MainTabNavigator from './mainTabNavigator.js';
 import HomeScreen from '../screens/homeSccreen.js';
 import profileScreen from '../screens/profileScreen.js';
