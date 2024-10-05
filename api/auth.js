@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000/auth/';  // Your backend API URL
+const API_URL = 'https://lp13z12n-8000.euw.devtunnels.ms/auth/login/';  // Your backend API URL
 
 // Register a new user
 export const registerUser = async (username, password, email) => {

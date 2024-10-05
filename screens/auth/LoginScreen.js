@@ -4,35 +4,51 @@ import CustomButton from '../../components/CustomButton';
 import CustomText from '../../components/CustomText';
 import {useNavigation} from '@react-navigation/native'
 import { loginUser } from '../../api/auth';
+import axios from 'axios';
+import { AuthContext } from '../../context/authContext';
+
 
 const LoginScreen = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isChecked, setIsChecked] = useState(false);
 
+  const Navigation = useNavigation();
+
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:8000/auth/login/', {
+      // Send the POST request to the login API
+      const response = await axios.post('https://lp13z12n-8000.euw.devtunnels.ms/auth/login/', {
         username,
         password,
       });
   
-      if (response.data.token) {
-        // Handle successful login, e.g., save token or navigate to another screen
-        console.log('Login successful!');
-        Navigation.navigate('Home');
+      // Log the response to check what data you are receiving
+      console.log('Login response:', response.data);
+  
+      // Check if 'token' or 'access_token' is present in the response data
+      if (response.data.token || response.data.access_token) {
+        // Handle successful login and navigate to another screen
+        const token = response.data.token || response.data.access_token; // Use the appropriate token
+        console.log('Login successful, token:', token);
+        Navigation.navigate('Converter'); // Navigate to the "Converter" screen
       } else {
+        // If no token is returned, show an error alert
         Alert.alert('Error', 'Invalid credentials');
       }
     } catch (error) {
-      Alert.alert('Error', 'Invalid credentials or server issue');
+      // Log the actual error for troubleshooting purposes
+      console.log('Login error:', error.response ? error.response.data : error.message);
+  
+      // Display a user-friendly error message
+      Alert.alert('Error', 'Invalid credentials or server issue. Please try again.');
     }
   };
+  
+  
   const toggleCheckbox = () => {
     setIsChecked(!isChecked); // Toggle checkbox state
   };
-
-  const Navigation = useNavigation();
   
 
   return (

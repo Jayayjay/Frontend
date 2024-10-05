@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';  // Import icons for
 import CryptoConverterScreen from '../screens/converterScreen';
 import transactionHistoryScreen from '../screens/transactionHistoryScreen';
 import profileScreen from '../screens/profileScreen';
+import HomeScreen from '../screens/homeSccreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +30,8 @@ const MainTabNavigator = () => (
       activeTintColor: 'tomato',
       inactiveTintColor: 'gray',
     }}
-  >
+  ><Stack.Screen name="OTP" component = {VerifyOTPScreen}/>
+    <Tab.Screen name="Home" component={HomeScreen}/>
     <Tab.Screen name="Converter" component={CryptoConverterScreen} />
     <Tab.Screen name="History" component={transactionHistoryScreen } />
     <Tab.Screen name="Profile" component={profileScreen} />

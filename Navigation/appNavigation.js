@@ -19,7 +19,6 @@ const AuthStack = () => (
     <Stack.Screen name="Login" component={LoginScreen} />
     {/* <Stack.Screen name = "Profile" component={profileScreen}/> */}
     <Stack.Screen name="Register" component={RegisterScreen} />
-    <Stack.Screen name="OTP" component = {VerifyOTPScreen}/>
   </Stack.Navigator>
 );
 
