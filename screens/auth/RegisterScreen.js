@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ImageBackground, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import CustomText from '../../components/CustomText';
+import axios from 'axios';
 
 
 
@@ -16,7 +17,7 @@ const RegisterScreen = ({ navigation }) => {
   const handleRegister = () => {
     if (password === confirmPassword) {
       console.log(`Sending request to ${route}`);
-      api.post(route, {
+      axios.post(route, {
         username: username,
         password: password,
 
